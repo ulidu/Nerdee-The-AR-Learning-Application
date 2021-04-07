@@ -6,5 +6,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="normalize" level="application" />
+    <orderEntry type="library" name="aframe" level="application" />
+    <orderEntry type="library" name="aframe-ar" level="application" />
+    <orderEntry type="library" name="aframe-extras" level="application" />
   </component>
 </module>

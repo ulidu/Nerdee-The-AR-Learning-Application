@@ -11,7 +11,7 @@
         document
             .querySelector(".say-hi-button")
             .addEventListener("click", function () {
-                window.location.href = "skin.html";
+                window.location.href = "dino.html";
             });
     };
 </script>
@@ -38,6 +38,7 @@
         height: 3em;
         font-weight: bold;
     }
+
 </style>
 
 <body style="margin : 0px; overflow: hidden;">
@@ -45,7 +46,6 @@
 <div class="buttons">
     <button class="say-hi-button">← &nbsp; Go Back</button>
 </div>
-
 <a-scene arjs embedded renderer="logarithmicDepthBuffer: true;"
          vr-mode-ui="enabled: false"
          gesture-detector
@@ -68,7 +68,7 @@
                 gltf-model="#bowser"
                 position="0 0 0"
                 rotation="0 0 0"
-                scale="0.09 0.09 0.09"
+                scale="0.08 0.08 0.08"
                 class="clickable"
                 gesture-handler>
         </a-entity>

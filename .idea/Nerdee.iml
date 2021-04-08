@@ -9,5 +9,6 @@
     <orderEntry type="library" name="aframe" level="application" />
     <orderEntry type="library" name="aframe-ar" level="application" />
     <orderEntry type="library" name="aframe-extras" level="application" />
+    <orderEntry type="library" name="gestures" level="application" />
   </component>
 </module>

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-<!-- we import arjs version without NFT but with marker + location based support -->
+<script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+
 <script>
     window.onload = function () {
         document
@@ -27,27 +30,51 @@
 
     .say-hi-button {
         padding: 0.25em;
-        border-radius: 4px;
+        border-radius: 8px;
         border: none;
-        background: white;
+        background: #ffe91f;
         color: black;
         width: 10em;
         height: 3em;
+        font-weight: bold;
     }
 </style>
+
 <body style="margin : 0px; overflow: hidden;">
+
 <div class="buttons">
-    <button class="say-hi-button">Go Back</button>
+    <button class="say-hi-button">← &nbsp; Go Back</button>
 </div>
-<a-scene embedded arjs>
-    <a-marker preset="hiro">
+
+<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;"
+         vr-mode-ui="enabled: false"
+         gesture-detector
+         id="scene">
+    <a-assets>
+        <a-asset-item
+                id="bowser"
+                src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf">
+        </a-asset-item>
+    </a-assets>
+
+    <a-marker
+            preset="hiro"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="markerA">
         <a-entity
+                id="bowser-model"
+                gltf-model="#bowser"
                 position="0 0 0"
-                scale="0.1 0.1 0.1"
-                gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-        ></a-entity>
+                rotation="0 0 0"
+                scale="0.09 0.09 0.09"
+                class="clickable"
+                gesture-handler>
+        </a-entity>
     </a-marker>
     <a-entity camera></a-entity>
 </a-scene>
+
 </body>
 </html>

@@ -1,10 +1,3 @@
-// -----------------------------------------------------------------
-// Service Worker:
-// Template Name: Suha - Multipurpose Ecommerce Mobile HTML Template
-// Template Author: Designing World
-// Template Author URL: https://themeforest.net/user/designing-world
-// -----------------------------------------------------------------
-
 const staticCacheName = 'pre-cache-v1.2';
 const dynamicCacheName = 'runtime-cache-v1.2';
 

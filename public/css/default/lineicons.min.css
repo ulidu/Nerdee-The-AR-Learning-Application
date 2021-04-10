@@ -213,7 +213,7 @@ Author: lineicons.com
     content: "\ea0a";
 }
 
-.lni-anchor::before {
+.lni-map::before {
     content: "\ea0b";
 }
 
@@ -605,7 +605,7 @@ Author: lineicons.com
     content: "\ea6c";
 }
 
-.lni-codepen::before {
+.lni-map::before {
     content: "\ea6d";
 }
 
